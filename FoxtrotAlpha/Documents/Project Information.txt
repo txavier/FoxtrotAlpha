@@ -1,0 +1,2 @@
+﻿ - The security setup was designed with the help of the following site.
+	- http://www.asp.net/web-api/overview/security/external-authentication-services
