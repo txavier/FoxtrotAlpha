@@ -29,6 +29,23 @@ namespace FoxtrotAlpha
                 "~/Scripts/app/home.viewmodel.js",
                 "~/Scripts/app/_run.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                      "~/wwwroot/lib/angular/angular.min.js",
+                      "~/wwwroot/lib/angular-route/angular-route.min.js",
+                      "~/wwwroot/lib/angular-animate/angular-animate.min.js"
+                      ));
+
+            bundles.Add(new ScriptBundle("~/bundles/angular-third-party").Include(
+                      "~/wwwroot/lib/angular-loading-bar/build/loading-bar.min.js",
+                      "~/wwwroot/lib/AngularJS-Toaster/toaster.min.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/angular-app").Include(
+                      "~/app/app.module.js",
+                      "~/app/app.config.js",
+                      "~/app/services/data.service.js",
+                      "~/app/home/home.controller.js",
+                      "~/app/login/login.controller.js"));
+
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
