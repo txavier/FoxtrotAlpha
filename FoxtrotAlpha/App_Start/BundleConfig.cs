@@ -43,7 +43,9 @@ namespace FoxtrotAlpha
                       "~/app/app.module.js",
                       "~/app/app.config.js",
                       "~/app/services/data.service.js",
+                      "~/app/services/error.service.js",
                       "~/app/home/home.controller.js",
+                      "~/app/action-figures/add-action-figure.controller.js",
                       "~/app/login/login.controller.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
@@ -58,6 +60,7 @@ namespace FoxtrotAlpha
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                  "~/Content/bootstrap.css",
+                 "~/wwwroot/lib/AngularJS-Toaster/toaster.min.css",
                  "~/Content/Site.css"));
         }
     }

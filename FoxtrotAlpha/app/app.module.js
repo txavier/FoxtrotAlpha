@@ -4,6 +4,8 @@
     angular
         .module('app', [
             'ngRoute',
+            'toaster',
+            'ngAnimate',
         ]);
 
 })();

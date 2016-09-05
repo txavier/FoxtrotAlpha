@@ -1,5 +1,4 @@
-﻿using AutoClutch.Auto.Service.Interfaces;
-using FoxtrotAlpha.Core.Models;
+﻿using FoxtrotAlpha.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

@@ -156,6 +156,7 @@
                             <a class="button_green button" href="users/create.html">
                                 Register
                             </a>
+                            @Html.ActionLink("Register as a new user", "Register")
                         </li>
                         <li>
                             <a href="login4d01.html?return_to=%2F" id="log_in_link" class="nav_group_control">
@@ -455,6 +456,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/angular-third-party")
     @Scripts.Render("~/bundles/angular-app")
     @RenderSection("Scripts", required: false)
 </body>

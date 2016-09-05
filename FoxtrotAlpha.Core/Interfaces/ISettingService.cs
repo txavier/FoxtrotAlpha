@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoClutch.Auto.Core.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FoxtrotAlpha.Core.Interfaces
 {
-    public interface ISettingService : AutoClutch.Auto.Service.Interfaces.IService<FoxtrotAlpha.Core.Models.setting>
+    public interface ISettingService : IService<FoxtrotAlpha.Core.Models.setting>
     {
         string GetSettingValueBySettingKey(string settingKey);
 

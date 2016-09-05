@@ -1,6 +1,5 @@
 ﻿using AutoClutch.Auto.Repo.Interfaces;
 using AutoClutch.Auto.Repo.Objects;
-using AutoClutch.Auto.Service.Interfaces;
 using AutoClutch.Auto.Service.Services;
 using StructureMap.Configuration.DSL;
 using StructureMap;
@@ -15,6 +14,8 @@ using FoxtrotAlpha.Data;
 using FoxtrotAlpha.Core.Services;
 using FoxtrotAlpha.Core.Interfaces;
 using FoxtrotAlpha.Infrastructure.Getters;
+using AutoClutch.Auto.Core.Interfaces;
+using Auto.Service.Services;
 
 namespace FoxtrotAlpha.CompositionRoot
 {
