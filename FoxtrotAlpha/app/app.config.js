@@ -7,6 +7,11 @@
 
     function config($routeProvider, $locationProvider) {
         $routeProvider
+            .when('/view-action-figure/:actionFigureId', {
+                templateUrl: 'app/action-figures/view-action-figure.html',
+                controller: 'ViewActionFigureController',
+                controllerAs: 'vm'
+            })
             .when('/add-action-figure', {
                 templateUrl: 'app/action-figures/add-action-figure.html',
                 controller: 'AddActionFigureController',

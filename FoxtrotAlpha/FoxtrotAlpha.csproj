@@ -278,6 +278,8 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\action-figures\view-action-figure.html" />
+    <Content Include="app\action-figures\view-action-figure.controller.js" />
     <Content Include="app\action-figures\add-action-figure.controller.js" />
     <Content Include="app\action-figures\add-action-figure.html" />
     <Content Include="app\app.config.js" />

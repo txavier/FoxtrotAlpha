@@ -14,7 +14,7 @@
                         <a href="sell/list.html">Buy</a> &amp; <a href="sell/index.html">Sell</a> in the Marketplace.<br>
                     </h1>
                 </div>
-                <div id="homepage-registration" class="gs_container_column">
+                @*<div id="homepage-registration" class="gs_container_column">
                     <h4>Don't have an account?</h4>
                     <a href="https://www.facebook.com/v2.0/dialog/oauth?scope=public_profile%2Cemail&amp;state=5880cef26f66ac7bf6bf3d6f8f&amp;redirect_uri=https%3A%2F%2Fwww.discogs.com%2Flogin%2Ffb&amp;response_type=code&amp;client_id=142865859247381" class="button button_blue social-login first"><i class="icon icon-facebook"></i> Sign up with Facebook</a>
                     <a href="https://accounts.google.com/o/oauth2/auth?scope=profile+email&amp;state=8c7196e288b2d82d23b9be70b3&amp;redirect_uri=https%3A%2F%2Fwww.discogs.com%2Flogin%2Fgoogle&amp;response_type=code&amp;client_id=914316892168.apps.googleusercontent.com" class="button button_red social-login"><i class="icon icon-google-plus"></i> Sign up with Google</a>
@@ -38,6 +38,56 @@
                                placeholder="Enter your email address">
                         <button class="button button_green">Create Account</button>
                     </form>
+                </div>*@
+                <div class="row">
+                    <div class="col-md-12 gs_container_column">
+                        <section id="loginForm">
+                            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <h4>Use a local account to log in hey.</h4>
+                                <hr />
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-10">
+                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-10">
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <div class="checkbox">
+                                            @Html.CheckBoxFor(m => m.RememberMe)
+                                            @Html.LabelFor(m => m.RememberMe)
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" value="Log in" class="button button-green" />
+                                    </div>
+                                </div>
+                                <p>
+                                    @Html.ActionLink("Register as a new user", "Register")
+                                </p>
+                                @* Enable this once you have account confirmation enabled for password reset functionality
+                        <p>
+                            @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                        </p>*@
+                            }
+                        </section>
+                        <section id="socialLoginForm">
+                            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>
@@ -5743,7 +5793,7 @@
                              data-object-id="960809"
                              data-object-type="master release"
                              data-ng-repeat="actionFigure in vm.actionFigures">
-                            <a href="Cari-Lekebusch--Alexi-Delano-Jimmys-Techniq/master/960809.html" class="thumbnail_link thumbnail_size_large thumbnail_orientation_landscape">
+                            <a href="#/view-action-figure/{{ actionFigure.actionFigureId }}" class="thumbnail_link thumbnail_size_large thumbnail_orientation_landscape">
                                 <span class="thumbnail_border"></span>
                                 <span class="thumbnail_center">
                                     <img data-ng-src="{{ actionFigure.imageUrl }}"
