@@ -16,6 +16,8 @@ using FoxtrotAlpha.Core.Interfaces;
 using FoxtrotAlpha.Infrastructure.Getters;
 using AutoClutch.Auto.Core.Interfaces;
 using Auto.Service.Services;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace FoxtrotAlpha.CompositionRoot
 {
@@ -39,6 +41,8 @@ namespace FoxtrotAlpha.CompositionRoot
             For<IEnvironmentConfigSettingsGetter>().Use<EnvironmentConfigSettingsGetter>();
 
             For(typeof(ILogService<>)).Use(typeof(UserActionLogService<>));
+
+            For(typeof(IUserStore<>)).Use(typeof(UserStore<>));
         }
     }
 }

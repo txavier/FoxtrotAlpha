@@ -47,6 +47,7 @@ namespace FoxtrotAlpha
                       "~/app/home/home.controller.js",
                       "~/app/action-figures/add-action-figure.controller.js",
                       "~/app/action-figures/view-action-figure.controller.js",
+                      "~/app/home/home.controller.js",
                       "~/app/login/login.controller.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
