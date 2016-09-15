@@ -14,8 +14,6 @@
         activate();
 
         function activate() {
-            vm.actionFigureId = $routeParams.actionFigureId;
-
             var actionFigureSearchCriteria = {
                 page: 1,
                 perPage: 30,
@@ -23,7 +21,7 @@
                 search: null,
                 searchFields: null,
                 expand: null,
-                q: 'actionFigureId == ' + vm.actionFigureId,
+                q: null,
                 fields: null
             };
 

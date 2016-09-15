@@ -19,7 +19,7 @@
             })
             .when('/home', {
                 templateUrl: 'app/home/home.html',
-                controller: 'homeController',
+                controller: 'HomeController',
                 controllerAs: 'vm'
             })
             .otherwise({ redirectTo: 'home' });

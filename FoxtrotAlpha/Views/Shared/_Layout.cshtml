@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="//s.discogs.com/dst/fontawesome/font-awesome-ie7.css" />
     <![endif]-->
     <link rel="stylesheet" type="text/css" href="../s.discogs.com/dst/stylesheets/sections/get_starteda712.css?7b8ce" />
+    @Styles.Render("~/Content/css")
+    @*@Scripts.Render("~/bundles/modernizr")*@
     <link rel="icon" href="https://s.discogs.com/images/favicon.ico" />
     <link rel="icon" sizes="16x16" href="../s.discogs.com/images/favicon-16x16.png" />
     <link rel="icon" sizes="32x32" href="../s.discogs.com/images/favicon-32x32.png" />
@@ -197,7 +199,7 @@
                 <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
             </footer>*@
         </div>
-        <div class="container body-content" data-ng-view>
+        <div class="container-fluid body-content" data-ng-view>
         </div>
         <div id="push_footer"></div>
     </div>
