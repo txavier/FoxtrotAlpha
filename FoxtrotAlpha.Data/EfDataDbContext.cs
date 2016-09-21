@@ -6,8 +6,10 @@ namespace FoxtrotAlpha.Data
     using System.Linq;
     using Core.Models;
     using TrackerEnabledDbContext.Common.Extensions;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
 
-    public partial class EfDataDbContext : TrackerEnabledDbContext.TrackerContext
+    public partial class EfDataDbContext : TrackerEnabledDbContext.Identity.TrackerIdentityContext<IdentityUser>
     {
         public EfDataDbContext()
             : base("name=DefaultConnection")

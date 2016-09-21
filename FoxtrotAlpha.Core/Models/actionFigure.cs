@@ -17,6 +17,7 @@ namespace FoxtrotAlpha.Core.Models
         public string name { get; set; }
         public int? makeId { get; set; }
         public string imageUrl { get; set; }
+        public string upc { get; set; }
         public make make { get; set; }
     }
 }

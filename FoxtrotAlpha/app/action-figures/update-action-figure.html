@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-3">
-            <img style="padding:1px;border:1px solid #021a40;max-width:228.6px;" 
+            <img style="padding:1px;border:1px solid #021a40;" 
                  src="{{ vm.actionFigure.imageUrl ? vm.actionFigure.imageUrl : '../../s.discogs.com/images/default-release-cd.png' }}" />
         </div>
         <div class="col-lg-9">
@@ -15,10 +15,9 @@
                     <small id="emailHelp" class="form-text text-muted">Enter the figures name.</small>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Image</label>
-                    <!--<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter image url"
-                           data-ng-model="vm.actionFigure.imageUrl">-->
-                    <input type="file" fileread="vm.actionFigure.imageUrl" />
+                    <label for="exampleInputEmail1">Image URL</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter image url"
+                           data-ng-model="vm.actionFigure.imageUrl">
                     <small id="emailHelp" class="form-text text-muted">Enter the figure's default image url.</small>
                 </div>
                 <div class="form-group">
@@ -83,7 +82,7 @@
                         Check me out
                     </label>
                 </div>
-                <button class="btn btn-primary" data-ng-click="vm.addEntity(vm.actionFigure)">Submit</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
     </div>

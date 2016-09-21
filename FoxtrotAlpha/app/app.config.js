@@ -7,6 +7,16 @@
 
     function config($routeProvider, $locationProvider) {
         $routeProvider
+            .when('/dashboard', {
+                templateUrl: 'app/user/dashboard.html',
+                controller: 'DashboardController',
+                controllerAs: 'vm'
+            })
+            .when('/update-action-figure/:actionFigureId', {
+                templateUrl: 'app/action-figures/update-action-figure.html',
+                controller: 'UpdateActionFigureController',
+                controllerAs: 'vm'
+            })
             .when('/view-action-figure/:actionFigureId', {
                 templateUrl: 'app/action-figures/view-action-figure.html',
                 controller: 'ViewActionFigureController',
@@ -18,7 +28,7 @@
                 controllerAs: 'vm'
             })
             .when('/home', {
-                templateUrl: 'app/home/home.html',
+                templateUrl: '/app/home/home.html',
                 controller: 'HomeController',
                 controllerAs: 'vm'
             })

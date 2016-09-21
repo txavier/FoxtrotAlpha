@@ -1,16 +1,15 @@
 ﻿(function () {
     angular
         .module('app')
-        .controller('AddActionFigureController', AddActionFigureController);
+        .controller('DashboardController', DashboardController);
 
-    AddActionFigureController.$inject = ['$scope', '$routeParams', '$location', 'dataService'];
+    DashboardController.$inject = ['$scope', '$routeParams', '$location', 'dataService'];
 
-    function AddActionFigureController($scope, $routeParams, $location, dataService) {
+    function DashboardController($scope, $routeParams, $location, dataService) {
         var vm = this;
 
         vm.defaultImageUrl = '../s.discogs.com/images/default-release-cd.png';
         vm.actionFigure = {};
-        vm.addEntity = addEntity;
 
         activate();
 
@@ -25,6 +24,16 @@
                 q: null,
                 fields: null
             };
+
+            getActionFigures(actionFigureSearchCriteria);
+        }
+
+        function getActionFigures(searchCriteria) {
+            return dataService.searchEntities('actionFigures', searchCriteria).then(function (data) {
+                vm.actionFigures = data;
+
+                return vm.actionFigures;
+            });
         }
 
         function addEntity(actionFigure) {

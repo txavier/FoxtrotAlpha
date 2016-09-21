@@ -218,6 +218,10 @@
       <HintPath>..\packages\TrackerEnabledDbContext.Common.3.5.2\lib\net45\TrackerEnabledDbContext.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="TrackerEnabledDbContext.Identity, Version=3.5.2.0, Culture=neutral, PublicKeyToken=4f92af0b908c4a0a, processorArchitecture=MSIL">
+      <HintPath>..\packages\TrackerEnabledDbContext.Identity.3.5.2\lib\net45\TrackerEnabledDbContext.Identity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
@@ -283,18 +287,31 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\action-figures\update-action-figure.html" />
+    <Content Include="app\action-figures\update-action-figure.controller.js" />
     <Content Include="app\action-figures\view-action-figure.html" />
     <Content Include="app\action-figures\view-action-figure.controller.js" />
     <Content Include="app\action-figures\add-action-figure.controller.js" />
     <Content Include="app\action-figures\add-action-figure.html" />
     <Content Include="app\app.config.js" />
     <Content Include="app\app.module.js" />
+    <Content Include="app\buy\cart.html" />
+    <Content Include="app\buy\items-i-want.html" />
+    <Content Include="app\buy\purchases.html" />
     <Content Include="app\home\home.controller.js" />
     <Content Include="app\home\home.html" />
     <Content Include="app\login\login.controller.js" />
     <Content Include="app\login\login.html" />
+    <Content Include="app\sale\billing.html" />
+    <Content Include="app\sale\inventory.html" />
+    <Content Include="app\sale\list-item-for-sale.html" />
+    <Content Include="app\sale\orders.html" />
     <Content Include="app\services\data.service.js" />
     <Content Include="app\services\error.service.js" />
+    <Content Include="app\social\friends.html" />
+    <Content Include="app\social\groups.html" />
+    <Content Include="app\user\dashboard.controller.js" />
+    <Content Include="app\user\dashboard.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
     <Content Include="Content\bootstrap.css" />
@@ -455,6 +472,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\brand\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
