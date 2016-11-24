@@ -3,9 +3,9 @@
         .module('app')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['$scope', '$routeParams', 'dataService'];
+    HomeController.$inject = ['$scope', '$routeParams', 'odataService'];
 
-    function HomeController($scope, $routeParams, dataService) {
+    function HomeController($scope, $routeParams, odataService) {
         var vm = this;
 
         vm.defaultImageUrl = '../s.discogs.com/images/default-release-cd.png';
@@ -29,8 +29,8 @@
         }
 
         function getActionFigures(searchCriteria) {
-            return dataService.searchEntities('actionFigures', searchCriteria).then(function (data) {
-                vm.actionFigures = data;
+            return odataService.searchEntitiesOData('actionFigures', searchCriteria).then(function (data) {
+                vm.actionFigures = data.value;
 
                 return vm.actionFigures;
             });

@@ -5,8 +5,18 @@
         .module('app')
         .config(config);
 
-    function config($routeProvider, $locationProvider) {
+    config.$inject = ['$routeProvider', '$locationProvider', '$httpProvider'];
+
+    function config($routeProvider, $locationProvider, $httpProvider) {
+        // Configure the security token bearer interceptor.
+        $httpProvider.interceptors.push('authInterceptorService');
+
         $routeProvider
+            .when('/makes', {
+                templateUrl: 'app/make/makes.html',
+                controller: 'MakesController',
+                controllerAs: 'vm'
+            })
             .when('/dashboard', {
                 templateUrl: 'app/user/dashboard.html',
                 controller: 'DashboardController',
@@ -33,6 +43,7 @@
                 controllerAs: 'vm'
             })
             .otherwise({ redirectTo: 'home' });
+
     }
 
 })();

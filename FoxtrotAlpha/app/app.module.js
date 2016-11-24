@@ -6,6 +6,7 @@
             'ngRoute',
             'toaster',
             'ngAnimate',
+            'ngSessionStorage'
         ]);
 
 })();

@@ -3,9 +3,9 @@
         .module('app')
         .controller('LoginController', LoginController);
 
-    LoginController.$inject = ['$scope', '$routeParams', 'dataService'];
+    LoginController.$inject = ['$scope', '$routeParams', 'odataService'];
 
-    function LoginController($scope, $routeParams, dataService) {
+    function LoginController($scope, $routeParams, odataService) {
         var vm = this;
 
         vm.defaultImageUrl = '../s.discogs.com/images/default-release-cd.png';
@@ -49,7 +49,7 @@
         }
 
         function getActionFigures(searchCriteria) {
-            return dataService.searchEntities('actionFigures', searchCriteria).then(function (data) {
+            return odataService.searchEntitiesOData('actionFigures', searchCriteria).then(function (data) {
                 vm.actionFigures = data;
 
                 return vm.actionFigures;
