@@ -328,8 +328,12 @@
     <Content Include="app\home\home.html" />
     <Content Include="app\login\login.controller.js" />
     <Content Include="app\login\login.html" />
+    <Content Include="app\make\add-make.controller.js" />
+    <Content Include="app\make\add-make.html" />
     <Content Include="app\make\makes.controller.js" />
     <Content Include="app\make\makes.html" />
+    <Content Include="app\make\update-make.controller.js" />
+    <Content Include="app\make\update-make.html" />
     <Content Include="app\sale\billing.html" />
     <Content Include="app\sale\inventory.html" />
     <Content Include="app\sale\list-item-for-sale.html" />

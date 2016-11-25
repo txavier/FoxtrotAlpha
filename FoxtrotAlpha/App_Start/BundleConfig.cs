@@ -54,7 +54,9 @@ namespace FoxtrotAlpha
                       "~/app/user/dashboard.controller.js",
                       "~/app/home/home.controller.js",
                       "~/app/login/login.controller.js",
-                      "~/app/make/makes.controller.js"
+                      "~/app/make/makes.controller.js",
+                      "~/app/make/add-make.controller.js",
+                      "~/app/make/update-make.controller.js"
                       ));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're

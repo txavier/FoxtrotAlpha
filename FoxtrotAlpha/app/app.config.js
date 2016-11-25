@@ -12,6 +12,16 @@
         $httpProvider.interceptors.push('authInterceptorService');
 
         $routeProvider
+            .when('/update-make/:makeId', {
+                templateUrl: 'app/make/update-make.html',
+                controller: 'UpdateMakeController',
+                controllerAs: 'vm'
+            })
+            .when('/add-make', {
+                templateUrl: 'app/make/add-make.html',
+                controller: 'AddMakeController',
+                controllerAs: 'vm'
+            })
             .when('/makes', {
                 templateUrl: 'app/make/makes.html',
                 controller: 'MakesController',

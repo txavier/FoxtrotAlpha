@@ -46,6 +46,7 @@ namespace FoxtrotAlpha
             builder.EntityType<actionFigure>().Select("name");
 
             builder.EntitySet<make>("makes");
+            builder.EntityType<make>().Filter("makeId");
 
             config.MapODataServiceRoute(
                 routeName: "ODataRoute",
